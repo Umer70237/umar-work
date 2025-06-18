@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .main-container{
+      width: 100%;
+      height: 100vh;
+      background: url(main.webp)no-repeat center center/cover;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .nav{
+      display: flex;
+      align-items: center;
+      padding: 30px 60px;
+ 
+ 
+    }
+    .nav-items{
+      display: flex;
+      padding: 30px 60px;
+      gap: 18px;
+      margin-left: 250px;
+      
+    }
+    .nav-items a{
+      
+      text-decoration: none;
+      color: black;
+    }
+    .nav-items a :first-child{
+      font-weight: bold;
+    }
+    .nav-items a:hover{
+      background-color: rgba(5, 196, 221, 0.725);
+    }
+
+.logo{
+  
+  height: 70px;
+  width: 150px;
+  
+  cursor: pointer;
+  
+}
+.btn button{
+  
+  font-size: 18px;
+  border-radius: 40px;
+  padding: 10px 60px;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0.1px solid black;
+  margin-left: 100px;
+
+}
+.btn button:hover{
+  background-color: rgba(0, 0, 0, 0.702);
+  color: white;
+}
+
+.main-text{
+  margin-top: 200px;
+  margin-left: 700px;
+  color: white;
+  padding: 10px 20px;
+}
+.main-text h1{
+  font-size: 60px;
+  margin-left: -230px;
+  margin-top: 20px;
+
+}
+.main-text button{
+  padding: 15px 55px;
+  margin-top: 20px;
+  background-color: white;
+  border-radius: 50px;
+  border: transparent;
+  font-size: 15px;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+.main-text button:hover{
+  background-color: black;
+  color: white;
+}
+
+.second-container{
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  padding: 30px 60px;
+  text-align: center;
+  margin-left: 100px;
+   
+}
+.second-container img{
+   cursor: pointer;
+}
+.first-para{
+  font-size: 35px;
+  color: rgba(0, 0, 0, 0.795);
+  
+}
+
+
+.second-para{
+  margin-top: 20px;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.707);
+}
+.third-para{
+  margin-top: 30px;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.707);
+}
+
+.third-container{
+  display: flex;
+  margin-top: 100px;
+  padding: 30px 60px;
+  gap: 100px;
+  justify-content: center;
+  
+}
+.third-container img{
+   cursor: pointer;
+}
+.paragraph1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
+
+}
+.paragraph1 h1{
+  color: #679267d3;
+  font-size: 21px;
+  font-family: Arial, Helvetica, sans-serif
+  ;
+  font-weight: bold;
+  padding: 10px 20px;
+  margin-bottom: 16px;
+}
+
+.paragraph1 p{
+  font-size: 26px;
+  color: rgba(0, 0, 0, 0.683);
+}
+.paragraph1 button{
+  font-size: 20px;
+  padding: 12px 70px;
+  background-color: #679267d3;
+  color: white;
+  border: transparent;
+  border-radius: 50px;
+  margin-top: 25px;
+  cursor: pointer;
+
+}
+.fourth-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Left Tall Image */
+.gallery-img2 img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-img2 {
+  flex: 1;
+  min-width: 300px;
+  max-width: 35%;
+}
+
+/* Right Side Container */
+.gallery-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+  min-width: 300px;
+  max-width: 60%;
+}
+
+/* Top Right Large Image */
+.gallery-img3 img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* Bottom Right Two Small Images */
+.fifth-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.fifth-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-img4 img,
+.gallery-img5 img {
+  width: 399px;
+  height: 250px; /* ✅ Fixed equal height */
+  object-fit: cover; /* ✅ Makes image fill box without stretching */
+  display: block;
+}
+
+.last-container{
+  display: flex;
+  padding: 60px 30px 10px;
+  
+}
+.last-container button{
+  padding: 10px 60px;
+  background-color: #679267d3;
+  color: white;
+  border-radius: 50px;
+  border: transparent;
+  margin-left: 170px;
+  font-size: 22px;
+  cursor: pointer;
+
+}
+.last-container h1{
+  margin-left: 100px;
+}
+.hamburger{
+  cursor: pointer;
+  display: none;
+  
+}
+
+.hamburger div{
+  background-color: black;
+  width: 30px;
+  height: 3px;
+  margin-top: 5px;
+  transition:all ease 0.5s;
+  
+
+}
+
+.hamburger.apply .line-1{
+  transform: rotate(-45deg) translate(-10px,0px);
+}
+.hamburger.apply .line-2{
+  opacity: 0;
+}
+.hamburger.apply .line-3{
+  transform: rotate(45deg) translate(-10px,0px);
+}
+
+
+
+
+
+@media screen and (max-width:768px) {
+  .nav-items{
+    display: none;
+  }
+  .btn{
+   display: none; 
+  }
+  .hamburger{
+    display: block;
+    margin-left: 240px;
+  }
+
+  .nav-items.list{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 100px;
+    right: 10px;
+    padding: 20px 30px;
+ 
+    
+    
+
+  }
+  .main-text {
+      margin: 100px 20px 0;
+      text-align: center;
+    }
+
+    .main-text h2 {
+      font-size: 28px;
+    }
+
+    .main-text h1 {
+      font-size: 34px;
+      margin: 10px 0 0;
+    }
+
+    .main-text button {
+      font-size: 14px;
+      padding: 12px 40px;
+      margin-top: 15px;
+    }
+
+}
+
+
+  </style>
+</head>
+<body>
+  <div class="main-container">
+
+    <div class="nav">
+
+      <img src="logo.webp" alt="logo" class="logo">
+
+     
+
+
+      <div class="nav-items">
+        <a href="#">HOME</a>
+        <a href="#">OFFER</a>
+        <a href="#">GALLERY</a>
+        <a href="#">BLOG</a>
+        <a href="#">ABOUT US</a>
+        <a href="#">CONTACT</a>
+      
+      </div>
+      <div class="btn">
+        <button>SIGN UP</button>
+      </div>
+
+       <div class="hamburger" onclick="changeit(this)">
+        <div class="line-1"></div>
+        <div class="line-2"></div>
+        <div class="line-3"></div>
+      </div>
+
+    </div>
+
+    <div class="main-text">
+<h2>Adventurers</h2>
+<h1>Let yourself be impressed</h1>
+<button>SIGN UP</button>
+
+    </div>
+
+
+
+
+  </div>
+
+  <div class="second-container">
+    <div class="text">
+      <p class="first-para">POWER OF IMPRESSIONS GUARANTEED<br>
+<span  class="words">FEEL EXTREMELY</span></p>
+<p class="second-para">
+  Curabitur sit amet purus semper tortor tempor lacinia eu in tortor. Integer nisl risus,<br> condimentum sed lacinia in, tincidunt eget mi. Praesent finibus mollis blandit.<br> Suspendisse vulputate turpis et erat iaculis viverra.
+</p>
+<p class="third-para">
+  Curabitur sit amet purus semper Tortor Tempor
+</p>
+
+      
+    </div>
+<div class="third-container">
+  <div class="galllery-img1">
+  <img src="alpinism.webp" alt="img" class="img1">
+  </div>
+
+  <div class="paragraph1">
+    <h1>ROCK CLIMBING</h1>
+    <p>Curabitur sit amet purus semper tortor tempor<br> lacinia eu in tortor. Integer nisl risus,<br> condimentum sed lacinia in.</p>
+    <button>SIGN UP</button>
+
+  </div>
+</div>
+    
+
+
+
+<div class="third-container">
+
+  <div class="paragraph1">
+    <h1>EXTREME OFFROAD</h1>
+    <p>Curabitur sit amet purus semper tortor tempor<br> lacinia eu in tortor. Integer nisl risus,<br> condimentum sed lacinia in.</p>
+    <button>SIGN UP</button>
+
+  </div>
+  <div class="galllery-img1">
+  <img src="offroad.webp" alt="img" class="img1" style="height: 350px; width: 500px;">
+  </div>
+
+  
+</div>
+<h1 class="Gallery-head" style="padding: 50px 60px;">GALLERY</h1>
+
+<div class="fourth-container">
+  <!-- Left Tall Image -->
+  <div class="gallery-img2">
+    <img src="Gallery_1.webp" alt="img">
+  </div>
+
+  <!-- Right 3 Images -->
+  <div class="gallery-right">
+    <!-- Top Wide Image -->
+    <div class="gallery-img3">
+      <img src="Gallery_2.webp" alt="img">
+    </div>
+
+    <!-- Bottom Two Images Side by Side -->
+    <div class="fifth-container">
+      <div class="gallery-img4">
+        <img src="Gallery_3.webp" alt="img">
+      </div>
+      <div class="gallery-img5">
+        <img src="Gallery_4.webp" alt="img">
+      </div>
+    </div>
+  </div>
+</div>
+    
+<div class="last-container">
+
+  <h1>Do you have questions ? Suggestions ? Write to us.</h1>
+  <button>Contact</button>
+</div>
+
+
+  </div>
+
+  <script>
+    function changeit(current){
+      current.classList.toggle("apply");
+      document.querySelector(".nav-items").classList.toggle("list");
+    }
+  </script>
+</body>
+</html>
